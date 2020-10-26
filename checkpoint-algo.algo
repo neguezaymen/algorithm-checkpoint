@@ -1,27 +1,24 @@
 ALGORITHM sentence
 VAR
 
-    length-s:INTEGER:=0;
-    nb-words:INTEGER:=0;
-    nb-vowels:INTEGER:=0;
-    vowels : ARRAY_OF string [12]:=["a","A","e","E","i","I","o","O","u","U","y","Y"];
-    i:INTEGER:=0;
-    j:INTEGER:=0;
-    blank:INTEGER:=0;
+    length-s,nb-words,nb-volwels,i,j,blank:INTEGER:=0;
+    vowels : ARRAY_OF string [12];
+    
 BEGIN
-    write("enter a sentence ",sentence);
+    vowels:=["a","A","e","E","i","I","o","O","u","U","y","Y"];
+    write('enter a sentence ');
     read(sentence);
     FOR i FROM 1 TO sentence.length STEP 1  DO
-        IF (sentence[i]=" ") THEN
-            blank=blank+1;
+        IF (sentence[i]:=" ") THEN
+            blank:=blank+1;
         END_IF
     END_FOR
     length-s:=sentence.length-blank;
     nb-words:=blank+1;
     FOR i FROM 1 TO sentence.length STEP 1  DO
        FOR j FROM 1 TO vowels.length STEP 1 DO
-        IF (sentence[i]=vowels[j]) THEN
-            nb-vowels=nb-vowels+1;
+        IF (sentence[i]:=vowels[j]) THEN
+            nb-vowels:=nb-vowels+1;
         END_IF
     END_FOR
     END_FOR
