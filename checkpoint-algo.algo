@@ -1,8 +1,9 @@
 ALGORITHM sentence
 VAR
 
-    length-s,nb-words,nb-volwels,i,j,blank:INTEGER:=0;
+    length-s,nb-words,nb-volwels,blank:INTEGER:=0;
     vowels : ARRAY_OF string [12];
+    i,j:INTEGER;
     
 BEGIN
     vowels:=["a","A","e","E","i","I","o","O","u","U","y","Y"];
