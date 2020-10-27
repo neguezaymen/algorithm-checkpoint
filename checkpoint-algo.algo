@@ -8,15 +8,15 @@ BEGIN
     vowels:=["a","A","e","E","i","I","o","O","u","U","y","Y"];
     write('enter a sentence ');
     read(sentence);
-    FOR i FROM 1 TO sentence.length STEP 1  DO
+    FOR i FROM 1 TO sentence.length-1 STEP 1  DO
         IF (sentence[i]:=" ") THEN
             blank:=blank+1;
         END_IF
     END_FOR
-    length-s:=sentence.length-blank;
+    length-s:=sentence.length-1-blank;
     nb-words:=blank+1;
-    FOR i FROM 1 TO sentence.length STEP 1  DO
-       FOR j FROM 1 TO vowels.length STEP 1 DO
+    FOR i FROM 1 TO sentence.length-1 STEP 1  DO
+       FOR j FROM 1 TO vowels.length-1 STEP 1 DO
         IF (sentence[i]:=vowels[j]) THEN
             nb-vowels:=nb-vowels+1;
         END_IF
